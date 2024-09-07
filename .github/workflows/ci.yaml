@@ -27,12 +27,15 @@ jobs:
 
       - name: Install dependencies
         run: flutter pub get
+        working-directory: golmatch/
 
       - name: Analyze project source
         run: flutter analyze
+        working-directory: golmatch/
 
       - name: Run tests
         run: flutter test
+        working-directory: golmatch/
 
   build_web:
     name: Build Flutter(Web)
@@ -49,9 +52,12 @@ jobs:
 
       - name: Install dependencies
         run: flutter pub get
+        working-directory: golmatch/
 
       - name: Clean project
         run: flutter clean
+        working-directory: golmatch/
 
       - name: Run web
         run: flutter build web
+        working-directory: golmatch/
